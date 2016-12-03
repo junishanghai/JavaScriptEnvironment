@@ -37,10 +37,6 @@ $ npm run build
 
 ### npm script 一覧
 
-"clean": "rm -r node_modules/ && npm cache clean",
-"devBuild": "NODE_ENV=development webpack --display-error-details",
-"build": "NODE_ENV=production webpack"
-
 node_modules と npm のキャッシュを削除する
 
 ```
