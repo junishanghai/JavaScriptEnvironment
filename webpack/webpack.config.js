@@ -16,7 +16,7 @@ module.exports = {
         'application': './src/webpackEnvironment.js',
     },
     output: {
-        path: '../assets',
+        path: '../public/assets',
         filename: 'javascript/[name].bundle.js'
     },
     devtool: devtool,
