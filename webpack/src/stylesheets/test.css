@@ -2,9 +2,14 @@
 body {
     padding-top: 50px;
     font-family: -apple-system, 'Helvetica Neue', 'Hiragino Kaku Gothic ProN', '游ゴシック Medium', 'メイリオ', meiryo, sans-serif;
+    text-align: center;
 }
 .tooltip-inner {
     max-width: 30em;
     min-width: 8em;
     z-index: 1090;
+    color: #00FF00;
+}
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
 }
