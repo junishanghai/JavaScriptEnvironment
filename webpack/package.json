@@ -1,0 +1,31 @@
+{
+  "name": "webpackTest",
+  "version": "1.0.0",
+  "description": "webpack test project",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -r node_modules/ && npm cache clean",
+    "devBuild": "NODE_ENV=development webpack --display-error-details",
+    "build": "NODE_ENV=production webpack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.5.9",
+    "angular-cookies": "^1.5.9",
+    "angular-route": "^1.5.9",
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0",
+    "jquery": "^2.2.4"
+  },
+  "devDependencies": {
+    "css-loader": "^0.26.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.9.0",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.3"
+  }
+}
