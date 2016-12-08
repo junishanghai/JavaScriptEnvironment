@@ -5,11 +5,19 @@ var path = require('path');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 var devtool = DEBUG ? '#inline-source-map' : '#eval';
-var plugins = [ new webpack.ProvidePlugin({ jQuery: "jquery", $: "jquery", jquery: "jquery" }), new ExtractTextPlugin('stylesheets/[name].bundle.css') ];
 
-if (!DEBUG) {
+var LOG_ENV = false;
+var plugins = [];
+
+if (DEBUG) {
+    LOG_ENV = true;
+} else {
     plugins.push( new webpack.optimize.UglifyJsPlugin({compress: {warnings: false}}) );
 }
+
+plugins.push( new webpack.ProvidePlugin({ jQuery: "jquery", $: "jquery", jquery: "jquery" }) );
+plugins.push( new ExtractTextPlugin('stylesheets/[name].bundle.css') );
+plugins.push( new webpack.DefinePlugin( { DEBUG_LOG_ENV: LOG_ENV  }) );
 
 module.exports = {
     entry: {

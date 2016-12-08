@@ -7,7 +7,7 @@ angModule.angApp.config(["$httpProvider", "$routeProvider", "$logProvider", func
     }]);
 
     // $log.debug の表示設定
-    $logProvider.debugEnabled(true);
+    $logProvider.debugEnabled( DEBUG_LOG_ENV );
 
     $httpProvider.defaults.useXDomain = true;
     $httpProvider.defaults.withCredentials = true;
